@@ -100,17 +100,19 @@ brand-website/
 ## 部署
 
 ### Vercel
-
 推荐使用 Vercel 部署：
-
 ```bash
 npm install -g vercel
 vercel
 ```
 
 ### 其他平台
-
 项目可以部署到任何支持 Next.js 的平台，如 Netlify、AWS、阿里云等。
+
+### 部署状态
+- ✅ Next.js 已更新到 14.2.35（修复安全漏洞）
+- ✅ 依赖配置已修复
+- ✅ 网站已部署到 Vercel
 
 ## 许可证
 
