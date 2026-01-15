@@ -1,0 +1,87 @@
+# 品牌官网替换资料清单
+
+## 一、核心配置文件
+
+| 内容类型 | 具体内容 | 替换位置 | 当前内容 | 替换后内容 |
+|---------|---------|---------|---------|-----------|
+| 配置文件 | 品牌名称 | `app/layout.tsx` | BRAND | 【需要替换】 |
+| 配置文件 | Slogan | `app/layout.tsx` | 极致创新，激发可能 | 【需要替换】 |
+| 配置文件 | 网站域名 | `app/layout.tsx` | https://www.brand.com | 【需要替换】 |
+| 配置文件 | 网站域名 | `public/robots.txt` | https://www.brand.com | 【需要替换】 |
+| 配置文件 | 网站域名 | `app/sitemap.ts` | https://www.brand.com | 【需要替换】 |
+| 配置文件 | 主题颜色 | `tailwind.config.js` | primary: #0ea5e9 | 【需要替换】 |
+| 配置文件 | SEO关键词 | `app/layout.tsx` | 智能硬件,科技创新,充电设备,智能家居,智能影音,能源管理 | 【需要替换】 |
+
+## 二、图片资源
+
+| 内容类型 | 具体内容 | 替换位置 | 当前状态 | 替换后文件 |
+|---------|---------|---------|---------|-----------|
+| 图片 | 品牌Logo | 所有页面 | 占位符 | 【需要替换：images/logo.png】 |
+| 图片 | Hero背景图 | `components/Hero.tsx` | 渐变背景 | 【需要替换：images/hero-bg.jpg】 |
+| 图片 | 产品图片 | `app/products/page.tsx` | 占位符 | 【需要替换：images/product-{id}.jpg】 |
+| 图片 | 新闻配图 | `app/news/page.tsx` | 占位符 | 【需要替换：images/news-{id}.jpg】 |
+| 图片 | 团队照片 | `app/about/page.tsx` | 占位符 | 【需要替换：images/team-{name}.jpg】 |
+| 图片 | 浏览器图标 | `public/` | 未添加 | 【需要替换：images/favicon.ico】 |
+| 图片 | PWA图标192x192 | `public/` | 未添加 | 【需要替换：images/icon-192.png】 |
+| 图片 | PWA图标512x512 | `public/` | 未添加 | 【需要替换：images/icon-512.png】 |
+
+## 三、首页内容
+
+| 内容类型 | 具体内容 | 替换位置 | 当前内容 | 替换后内容 |
+|---------|---------|---------|---------|-----------|
+| 文本 | Hero标题 | `components/Hero.tsx` | 极致创新<br>激发可能 | 【需要替换】 |
+| 文本 | Hero副标题 | `components/Hero.tsx` | 一家极致创新的全球化智能硬件科技企业，致力于成为全球消费者热爱的品牌 | 【需要替换】 |
+| 文本 | 核心数据1 | `components/Stats.tsx` | 146+ | 【需要替换】 |
+| 文本 | 核心数据1名称 | `components/Stats.tsx` | 国家和地区 | 【需要替换】 |
+| 文本 | 核心数据2 | `components/Stats.tsx` | 200M+ | 【需要替换】 |
+| 文本 | 核心数据2名称 | `components/Stats.tsx` | 全球消费者 | 【需要替换】 |
+| 文本 | 核心数据3 | `components/Stats.tsx` | 53% | 【需要替换】 |
+| 文本 | 核心数据3名称 | `components/Stats.tsx` | 研发人员 | 【需要替换】 |
+| 文本 | 核心数据4 | `components/Stats.tsx` | 5,000+ | 【需要替换】 |
+| 文本 | 核心数据4名称 | `components/Stats.tsx` | 全球员工 | 【需要替换】 |
+
+## 四、产品中心
+
+| 内容类型 | 具体内容 | 替换位置 | 当前内容 | 替换后内容 |
+|---------|---------|---------|---------|-----------|
+| 文本 | 产品分类1 | `app/products/page.tsx` | 智能充电 | 【需要替换】 |
+| 文本 | 产品分类2 | `app/products/page.tsx` | 智能家居 | 【需要替换】 |
+| 文本 | 产品分类3 | `app/products/page.tsx` | 智能影音 | 【需要替换】 |
+| 文本 | 产品分类4 | `app/products/page.tsx` | 能源管理 | 【需要替换】 |
+| 文本 | 产品列表 | `app/products/page.tsx` | 8个示例产品 | 【需要替换：text/products.csv】 |
+| 文本 | 产品详情 | `app/products/[id]/page.tsx` | 示例内容 | 【需要替换：text/product-{id}.txt】 |
+
+## 五、关于我们
+
+| 内容类型 | 具体内容 | 替换位置 | 当前内容 | 替换后内容 |
+|---------|---------|---------|---------|-----------|
+| 文本 | 公司简介 | `app/about/page.tsx` | 示例内容 | 【需要替换：text/about-intro.txt】 |
+| 文本 | 使命 | `app/about/page.tsx` | 极致创新，激发可能 | 【需要替换】 |
+| 文本 | 愿景 | `app/about/page.tsx` | 成为全球消费者热爱的品牌 | 【需要替换】 |
+| 文本 | 核心价值观 | `app/about/page.tsx` | 第一性、求极致、共成长、持续学习 | 【需要替换：text/values.txt】 |
+| 文本 | 发展历程 | `app/about/page.tsx` | 示例时间线 | 【需要替换：text/history.csv】 |
+| 文本 | 管理团队 | `app/about/page.tsx` | 示例内容 | 【需要替换：text/team.csv】 |
+
+## 六、联系我们
+
+| 内容类型 | 具体内容 | 替换位置 | 当前内容 | 替换后内容 |
+|---------|---------|---------|---------|-----------|
+| 文本 | 联系电话 | `app/contact/page.tsx` | 400-888-8888 | 【需要替换】 |
+| 文本 | 电子邮箱 | `app/contact/page.tsx` | contact@brand.com | 【需要替换】 |
+| 文本 | 公司地址 | `app/contact/page.tsx` | 湖南省长沙市 | 【需要替换】 |
+| 文本 | 常见问题 | `app/contact/page.tsx` | 4条示例问题 | 【需要替换：text/faqs.csv】 |
+| 文本 | 社交媒体链接 | `app/contact/page.tsx` | 示例链接 | 【需要替换：text/social.csv】 |
+
+## 七、新闻资讯
+
+| 内容类型 | 具体内容 | 替换位置 | 当前内容 | 替换后内容 |
+|---------|---------|---------|---------|-----------|
+| 文本 | 新闻列表 | `app/news/page.tsx` | 8条示例新闻 | 【需要替换：text/news.csv】 |
+| 文本 | 新闻详情 | `app/news/[id]/page.tsx` | 示例内容 | 【需要替换：text/news-{id}.txt】 |
+
+## 八、页脚内容
+
+| 内容类型 | 具体内容 | 替换位置 | 当前内容 | 替换后内容 |
+|---------|---------|---------|---------|-----------|
+| 文本 | 版权信息 | `components/Footer.tsx` | © 2024 BRAND | 【需要替换】 |
+| 文本 | ICP备案号 | `components/Footer.tsx` | 湘ICP备XXXXXXXX号 | 【需要替换】 |
