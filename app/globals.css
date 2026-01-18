@@ -2,44 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Anthropic Brand CSS Variables */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --brand-dark: #141413;
+  --brand-light: #faf9f5;
+  --brand-gray-mid: #b0aea5;
+  --brand-gray-light: #e8e6dc;
+  --brand-orange: #d97757;
+  --brand-blue: #6a9bcc;
+  --brand-green: #788c5d;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
+/* Base Styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typography */
+.font-display {
+  font-family: var(--font-poppins), Arial, sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-lora), Georgia, serif;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-semibold;
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-orange via-brand-blue to-brand-green;
+  }
+}
+
+/* Component Base Styles */
+@layer components {
+  /* Button Base */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-display font-semibold transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-brand-orange text-white hover:bg-opacity-90 hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-brand-dark border-2 border-brand-gray-light hover:border-brand-orange hover:text-brand-orange active:scale-95;
+  }
+
+  /* Card Base */
+  .card {
+    @apply bg-white rounded-xl shadow-md transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Section Base */
+  .section {
+    @apply py-section px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-lg {
+    @apply py-section-lg px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
 }

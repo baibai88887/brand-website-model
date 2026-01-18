@@ -1,5 +1,21 @@
 import type { Metadata, Viewport } from "next";
+import { Poppins, Lora } from "next/font/google";
 import "./globals.css";
+
+// Anthropic Brand Fonts
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
+
+const lora = Lora({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  variable: '--font-lora',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -48,8 +64,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+    { media: '(prefers-color-scheme: light)', color: '#faf9f5' },
+    { media: '(prefers-color-scheme: dark)', color: '#141413' },
   ],
 };
 
@@ -59,8 +75,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
-      <body className="antialiased">
+    <html lang="zh-CN" className={`${poppins.variable} ${lora.variable}`}>
+      <body className="font-sans antialiased text-brand-dark bg-brand-light">
         {children}
       </body>
     </html>
